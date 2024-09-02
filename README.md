@@ -1,12 +1,20 @@
-# Trading-Platform
-full stack project using spring boot and react
+Here's a more polished and visually appealing version of the README for your Trading-Platform:
 
-## Database Design & Tables
+---
 
-link : https://watery-lunaria-74f.notion.site/Full-Stack-Trading-Plateform-b8111323c3324df195b85686be63ed28?pvs=4
+# 🎯 Trading-Platform
 
+Welcome to **Trading-Platform**, a comprehensive full-stack solution for crypto trading. Built with **Spring Boot** and **React**, this project offers a powerful, scalable, and user-friendly interface for managing your crypto assets.
 
-## Er Diagram
+## 🌐 Database Design & Tables
+
+Explore the detailed database design and table structures for a deep dive into how our platform is built:
+
+- [Database Design & Tables](https://watery-lunaria-74f.notion.site/Full-Stack-Trading-Plateform-b8111323c3324df195b85686be63ed28?pvs=4)
+
+## 📊 ER Diagram
+
+Here's a snapshot of our Entity-Relationship Diagram:
 
 ```
 +---------------------+           +-----------------+
@@ -40,7 +48,7 @@ link : https://watery-lunaria-74f.notion.site/Full-Stack-Trading-Plateform-b8111
 
 +--------------------+
 | Watchlists         |
-|--------------------+
+|--------------------|
 | id                 |
 | user_id            |
 +--------------------+
@@ -49,7 +57,7 @@ link : https://watery-lunaria-74f.notion.site/Full-Stack-Trading-Plateform-b8111
           v
 +--------------------+
 | Watchlist_Coins    |
-|--------------------+
+|--------------------|
 | watchlist_id       |
 | coin_id            |
 +--------------------+
@@ -151,199 +159,202 @@ link : https://watery-lunaria-74f.notion.site/Full-Stack-Trading-Plateform-b8111
 
 ```
 
-# Database Tables
+## 📑 Database Tables
 
-## Users Table
-
-| Field                   | Type    |
-|-------------------------|---------|
-| id                      | bigint  |
-| fullName                | varchar |
-| email                   | varchar |
-| mobile                  | varchar |
-| password                | varchar |
-| status                  | varchar |
-| isVerified              | boolean |
-| twoFactorAuth_enabled   | boolean |
-| twoFactorAuth_sendTo    | varchar |
-| picture                 | varchar |
-| role                    | varchar |
-
-## Coins Table
+### Users Table
 
 | Field                   | Type    |
 |-------------------------|---------|
-| id                      | varchar |
-| symbol                  | varchar |
-| name                    | varchar |
-| image                   | varchar |
-| current_price           | double  |
-| market_cap              | bigint  |
-| market_cap_rank         | int     |
-| fully_diluted_valuation | bigint  |
-| total_volume            | bigint  |
-| high_24h                | double  |
-| low_24h                 | double  |
-| price_change_24h        | double  |
-| price_change_percentage_24h | double  |
-| market_cap_change_24h   | bigint  |
-| market_cap_change_percentage_24h | double  |
-| circulating_supply      | bigint  |
-| total_supply            | bigint  |
-| max_supply              | bigint  |
-| ath                     | double  |
-| ath_change_percentage   | double  |
-| ath_date                | datetime|
-| atl                     | double  |
-| atl_change_percentage   | double  |
-| atl_date                | datetime|
-| roi                     | varchar |
-| last_updated            | datetime|
+| `id`                    | bigint  |
+| `fullName`              | varchar |
+| `email`                 | varchar |
+| `mobile`                | varchar |
+| `password`              | varchar |
+| `status`                | varchar |
+| `isVerified`            | boolean |
+| `twoFactorAuth_enabled` | boolean |
+| `twoFactorAuth_sendTo`  | varchar |
+| `picture`               | varchar |
+| `role`                  | varchar |
 
-## Assets Table
+### Coins Table
+
+| Field                   | Type    |
+|-------------------------|---------|
+| `id`                    | varchar |
+| `symbol`                | varchar |
+| `name`                  | varchar |
+| `image`                 | varchar |
+| `current_price`         | double  |
+| `market_cap`            | bigint  |
+| `market_cap_rank`       | int     |
+| `fully_diluted_valuation` | bigint  |
+| `total_volume`          | bigint  |
+| `high_24h`              | double  |
+| `low_24h`               | double  |
+| `price_change_24h`      | double  |
+| `price_change_percentage_24h` | double  |
+| `market_cap_change_24h` | bigint  |
+| `market_cap_change_percentage_24h` | double  |
+| `circulating_supply`    | bigint  |
+| `total_supply`          | bigint  |
+| `max_supply`            | bigint  |
+| `ath`                   | double  |
+| `ath_change_percentage` | double  |
+| `ath_date`              | datetime|
+| `atl`                   | double  |
+| `atl_change_percentage` | double  |
+| `atl_date`              | datetime|
+| `roi`                   | varchar |
+| `last_updated`          | datetime|
+
+### Assets Table
 
 | Field     | Type    |
 |-----------|---------|
-| id        | bigint  |
-| quantity  | double  |
-| buy_price | double  |
-| coin_id   | varchar |
-| user_id   | bigint  |
+| `id`      | bigint  |
+| `quantity`| double  |
+| `buy_price`| double  |
+| `coin_id` | varchar |
+| `user_id` | bigint  |
 
-## Withdrawals Table
+### Withdrawals Table
 
 | Field  | Type    |
 |--------|---------|
-| id     | bigint  |
-| status | varchar |
-| amount | bigint  |
-| user_id| bigint  |
-| date   | datetime|
+| `id`   | bigint  |
+| `status` | varchar |
+| `amount` | bigint  |
+| `user_id` | bigint  |
+| `date`   | datetime|
 
-## Watchlists Table
+### Watchlists Table
 
 | Field   | Type    |
 |---------|---------|
-| id      | bigint  |
-| user_id | bigint  |
+| `id`    | bigint  |
+| `user_id` | bigint  |
 
-## Watchlist_Coins Table
+### Watchlist_Coins Table
 
 | Field         | Type    |
 |---------------|---------|
-| watchlist_id  | bigint  |
-| coin_id       | varchar |
+| `watchlist_id` | bigint  |
+| `coin_id`      | varchar |
 
-## WalletTransactions Table
+### WalletTransactions Table
 
 | Field       | Type    |
 |-------------|---------|
-| id          | bigint  |
-| wallet_id   | bigint  |
-| type        | varchar |
-| date        | datetime|
-| transfer_id | varchar |
-| purpose     | varchar |
-| amount      | bigint  |
+| `id`        | bigint  |
+| `wallet_id` | bigint  |
+| `type`      | varchar |
+| `date`      | datetime|
+| `transfer_id` | varchar |
+| `purpose`   | varchar |
+| `amount`    | bigint  |
 
-## Wallets Table
+### Wallets Table
 
 | Field   | Type      |
 |---------|-----------|
-| id      | bigint    |
-| user_id | bigint    |
-| balance | decimal   |
+| `id`    | bigint    |
+| `user_id` | bigint    |
+| `balance` | decimal   |
 
-## VerificationCodes Table
+### VerificationCodes Table
 
 | Field             | Type    |
 |-------------------|---------|
-| id                | bigint  |
-| otp               | varchar |
-| user_id           | bigint  |
-| email             | varchar |
-| mobile            | varchar |
-| verification_type | varchar |
+| `id`              | bigint  |
+| `otp`             | varchar |
+| `user_id`         | bigint  |
+| `email`           | varchar |
+| `mobile`          | varchar |
+| `verification_type` | varchar |
 
-## TradingHistories Table
-
-| Field         | Type    |
-|---------------|---------|
-| id            | bigint  |
-| selling_price | double  |
-| buying_price  | double  |
-| coin_id       | varchar |
-| user_id       | bigint  |
-
-## PaymentOrders Table
+### TradingHistories Table
 
 | Field         | Type    |
 |---------------|---------|
-| id            | bigint  |
-| amount        | bigint  |
-| status        | varchar |
-| payment_method| varchar |
-| user_id       | bigint  |
+| `id`          | bigint  |
+| `selling_price` | double  |
+| `buying_price` | double  |
+| `coin_id`     | varchar |
+| `user_id`     | bigint  |
 
-## PaymentDetails Table
+### PaymentOrders Table
+
+| Field         | Type    |
+|---------------|---------|
+| `id`          | bigint  |
+| `amount`      | bigint  |
+| `status`      | varchar |
+| `payment_method` | varchar |
+| `user_id`     | bigint  |
+
+### PaymentDetails Table
 
 | Field               | Type    |
 |---------------------|---------|
-| id                  | bigint  |
-| account_number      | varchar |
-| account_holder_name | varchar |
-| ifsc                | varchar |
-| bank_name           | varchar |
-| user_id             | bigint  |
+| `id`                | bigint  |
+| `account_number`    | varchar |
+| `account_holder_name` | varchar |
+| `ifsc`              | varchar |
+| `bank_name`         | varchar |
+| `user_id`           | bigint  |
 
-## Orders Table
+### Orders Table
 
 | Field        | Type      |
 |--------------|-----------|
-| id           | bigint    |
-| user_id      | bigint    |
-| order_type   | varchar   |
-| price        | decimal   |
-| timestamp    | datetime  |
-| status       | varchar   |
-| order_item_id| bigint    |
+| `id`         | bigint    |
+| `user_id`    | bigint    |
+| `order_type` | varchar   |
+| `price`      | decimal   |
+| `timestamp`  | datetime  |
+| `status`     | varchar   |
+| `order_item_id` | bigint    |
 
-## OrderItems Table
-
-| Field        | Type    |
-|--------------|---------|
-| id           | bigint  |
-| quantity     | double  |
-| coin_id      | varchar |
-| buy_price    | double  |
-| sell_price   | double  |
-| order_id     | bigint  |
-
-## Notifications Table
+### OrderItems Table
 
 | Field        | Type    |
 |--------------|---------|
-| id           | bigint  |
-| from_user_id | bigint  |
-| to_user_id   | bigint  |
-| amount       | bigint  |
-| message      | varchar |
+| `id
 
-## MarketChartData Table
+`         | bigint  |
+| `quantity`   | double  |
+| `coin_id`    | varchar |
+| `buy_price`  | double  |
+| `sell_price` | double  |
+| `order_id`   | bigint  |
+
+### Notifications Table
 
 | Field        | Type    |
 |--------------|---------|
-| id           | bigint  |
-| timestamp    | datetime|
-| price        | double  |
+| `id`         | bigint  |
+| `from_user_id` | bigint  |
+| `to_user_id`   | bigint  |
+| `amount`     | bigint  |
+| `message`    | varchar |
 
-## ForgotPasswordTokens Table
+### MarketChartData Table
+
+| Field        | Type    |
+|--------------|---------|
+| `id`         | bigint  |
+| `timestamp`  | datetime|
+| `price`      | double  |
+
+### ForgotPasswordTokens Table
 
 | Field             | Type    |
 |-------------------|---------|
-| id                | varchar |
-| user_id           | bigint  |
-| otp               | varchar |
-| verification_type | varchar |
-| send_to           | varchar |
+| `id`              | varchar |
+| `user_id`         | bigint  |
+| `otp`             | varchar |
+| `verification_type` | varchar |
+| `send_to`         | varchar |
 
+---
